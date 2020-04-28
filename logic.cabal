@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: bb03e75bda22e4af69c24d9c9e292340a54b5524b37c9b098ed027a214b0ce77
+
+name:           logic
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/logic#readme>
+homepage:       https://github.com/githubuser/logic#readme
+bug-reports:    https://github.com/githubuser/logic/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/logic
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_logic
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , logict >=0.7.0.2 && <0.8
+  default-language: Haskell2010
+
+executable logic
+  main-is: Main.hs
+  other-modules:
+      Paths_logic
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , logic
+    , logict >=0.7.0.2 && <0.8
+  default-language: Haskell2010
